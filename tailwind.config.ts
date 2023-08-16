@@ -7,12 +7,20 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    colors: {
+      'rosa': '#FFC7DB',
+      'rosEsc': '#BF959A',
+      'amarelo': '#F6F894',
+      'amareloEsc': '#DCDE81',
+      'verde': '#88C7BC',
+      'verdeEsc': '#63998F',
+      'cinza': '#F5F5F5',
     },
   },
   plugins: [],
