@@ -7,9 +7,9 @@ interface ContactProps{
 
 export default function Contact({title, text, name, href}: ContactProps) {
     return (
-        <div>      
-                <span>{title}</span>
+        <div className="pb-6">      
+                <span className="font-bold">{title}</span>
                 <p>{text}</p>
-                <a href={href}>{name} </a>
+                <a href={href} className=" ">{name} </a>
       </div>
     )}

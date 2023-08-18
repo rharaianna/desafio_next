@@ -4,7 +4,7 @@ interface TextServicesProps {
 export function TextServices ({text}:TextServicesProps){
     return(
         <div
-        className="text-2xl m-2"
+        className="text-base md:text-xl m-2"
         > {text}</div>
     )
 }

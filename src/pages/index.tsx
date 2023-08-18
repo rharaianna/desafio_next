@@ -1,20 +1,24 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import AboutMe from '@/components/Home/AboutMe'
+import Produtos from '@/components/Home/Produtos'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <>
       <Head>
         <title> Home | Amicrafts </title>
+        <meta
+          name='description'
+          content='A AmiCrafts é especializada em criar brinquedos de pelúcia artesanais que são projetados com cuidado e atenção aos detalhes.'
+        />
       </Head>
     
-      <main>
+      <div className='py-12 px-6 md:px-32 space-y-10 md:space-y-20'>
         <AboutMe/>
-      </main>
+        <Produtos/>
+      </div>
     </>
   )
 }

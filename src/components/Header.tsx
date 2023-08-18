@@ -22,9 +22,9 @@ export default function Header() {
                 
                 <nav className={`${kumbhsans.className} hidden md:flex items-center gap-10 text-md`}>
                     <Link href={"/"}>Home</Link>
-                    <Link href={"/contato"}>Contato</Link>
+                    <Link href={"/contatos"}>Contato</Link>
                     <Link href={"/membros"}>Membros</Link>
-                    <Link href={"/gerenciamento"}>Login</Link>
+                    <Link href={"login"}>Login</Link>
                     <Link href={"/"}>Logout</Link>
                 </nav>
             
