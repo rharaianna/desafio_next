@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { TextServices } from "./Text";
 import { TitleServices } from "./Title";
+import Image from "next/image";
 
 
 export default function Footer() {
@@ -11,16 +12,16 @@ export default function Footer() {
                     <p className="w-52 text-sm text-center">Empresa espeicalizada na criação de Amigurumis de Crochet</p>
                 </div>
                 <div>
-                    <h1>Contato</h1>
-                    <div className="flex items-center gap-10 text-md">
+                    <h1 className="text-center font-bold pb-3">Contatos</h1>
+                    <div className="flex items-center gap-5 text-md">
                         <Link href={"#"}>
-                            <img src="/instagram.png" alt="Instagram da AmiCrafts"/>
+                            <Image width={30} height={30} src={"/instagram.png"} alt={"Instagram da AmiCrafts"}/>
                         </Link>
                         <Link href={"#"}>
-                            <img src="/mail.png" alt="Email da AmiCrafts"/>
+                            <Image width={30} height={30} src={"/mail.png"} alt={"Instagram da AmiCrafts"}/>
                         </Link>
                         <Link href={"#"}>
-                            <img src="/phone.png" alt="Telefone da AmiCrafts"/>
+                            <Image width={18} height={30} src={"/phone.png"} alt={"Instagram da AmiCrafts"}/>
                         </Link>
                     </div>
                 </div>

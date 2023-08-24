@@ -15,7 +15,7 @@ export default function NotFound() {
             <TitleServices title={"Opps"}/>
             <TitleServices title={"Não conseguimos encontrar esta página"}/>
             <Image src={"/Botão Triste.png"} alt={""} width={"60"} height={"60"}/>
-            <Button text={"Ir para a página inicial "} href={"/"}/>   
+            <Button  text={"Ir para a página inicial "} href={"/"}/>   
             
         </div>
         </>

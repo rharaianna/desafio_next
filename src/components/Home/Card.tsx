@@ -6,28 +6,61 @@ interface CardProdProp{
     item: string
     tamanho: string
     valor: string
-    width: number
-    height: number
+
 }
 
-export default function CardProd ({src, alt,item,width, height, tamanho,valor}:CardProdProp){
+export default function CardProd ({src, alt,item, tamanho,valor}:CardProdProp){
     return(
-    <div className="bg-amarelo flex md:flex-col shadow-sm p-3">
-        <div className="shadow-inner">
-            <Image src={src} alt={alt} width={width} height={height} />      
+    <div className="bg-amarelo flex md:flex-col shadow-lg p-3 rounded-lg">
+        <div className="shadow-inner rounded-lg w-fit">
+            <Image src={src} alt={alt} width={150} height={150} />      
         </div>
         <div>
-            <div className="flex">
-                <p>Item:</p>
+            <div className="flex justify-center font-semibold py-2 text-center">
                 <p> {item} </p>
             </div>
-            <div className="flex">
-                <p>Tamanho:</p>
-                <p> {tamanho} </p>
+            <div className="flex justify-between">
+                <div>
+                    <p >Tamanho:</p>
+                    <p>Valor:</p>
+                </div>
+                <div >
+                    <p className="text-end">{tamanho}</p>
+                    <p>R$ {valor}</p>
+                </div>
             </div>
-            <div className="flex">
-                <p>Valor:</p>
-                <p>R$ {valor}</p>
+        </div>
+    </div>
+    )
+}
+
+
+interface CardMembProp{
+    nome: string
+    src: string
+    alt: string
+    cargo: string
+    email: string
+
+}
+
+export function CardMemb ({src, alt,nome, cargo, email}:CardMembProp){
+    return(
+    <div className="bg-cinza flex md:flex-col md:w-40 shadow-lg p-3 rounded-lg">
+        <div className=" shadow-inner rounded-full w-16 relative">
+            <Image src={src} alt={alt} width={60} height={60} objectFit={"contain"}/>      
+        </div>
+        <div className="absolute bg-rosa left-0 right-0">
+
+        </div>
+        <div>
+            <div className="flex flex-col justify-center  py-2 text-center">
+                <p className="font-semibold pb-3"> {nome} </p>
+                <p>{cargo}</p>
+                <p>{email}</p>
+            </div>
+            <div>
+                    
             </div>
         </div>
     </div>

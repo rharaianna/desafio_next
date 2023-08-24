@@ -5,11 +5,18 @@ import CardProd from "./Card";
 export default function Produtos() {
     return (
         <div>
-            <TitleServices title={"Produtos"}/>
-            <div className="flex flex-wrap space-x-6 justify-center">
-            <CardProd src={"/colorphone.png"} alt={""} item={"telefone"} tamanho={"a"} valor={"w"} width={50} height={50}/>
-            <CardProd src={"/colorphone.png"} alt={""} item={"telefone"} tamanho={"a"} valor={"w"} width={50} height={50}/>
-            <CardProd src={"/colorphone.png"} alt={""} item={"telefone"} tamanho={"a"} valor={"w"} width={50} height={50}/>
+            <div className="pb-12">
+                <TitleServices title={"Produtos"}/>
+            </div>
+            <div className="flex flex-wrap gap-5 md:px-28 justify-center">
+            
+            <CardProd src={"/coelho.png"} alt={""} item={"telefone"} tamanho={"a"} valor={"w"} />
+            <CardProd src={"/coelho.png"} alt={""} item={"telefone"} tamanho={"a"} valor={"w"} />
+            <CardProd src={"/coelho.png"} alt={""} item={"telefone"} tamanho={"a"} valor={"w"} />
+            <CardProd src={"/coelho.png"} alt={""} item={"telefone"} tamanho={"a"} valor={"w"} />
+            <CardProd src={"/coelho.png"} alt={""} item={"telefone"} tamanho={"a"} valor={"w"} />
+            <CardProd src={"/coelho.png"} alt={""} item={"telefone"} tamanho={"a"} valor={"w"} />
+            
             </div>
         </div>
     )

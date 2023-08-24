@@ -21,6 +21,7 @@ const config: Config = {
       'verde': '#88C7BC',
       'verdeEsc': '#63998F',
       'cinza': '#F5F5F5',
+      'cinzaEsc':'#D9D9D9',
     },
   },
   plugins: [],

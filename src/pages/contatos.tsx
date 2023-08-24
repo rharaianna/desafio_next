@@ -18,16 +18,16 @@ export default function Contatos() {
           <Image src={'/colorphone.png'} alt={''} width={250} height={100}/>
           <ul className='bg-cinza rounded-r-lg p-6 shadow-md'>
               <li>
-                  <Contact title={"Instagram"} text={"Para conhecer mais sobre os nossos últimos projetos, encontre-nos com o "} name={"@AmiCrafts"} href={"#"}/>
+                  <Contact title={"Instagram"} text={"Para conhecer mais sobre os nossos últimos projetos, encontre-nos com o "} name={"@AmiCrafts"} href={"#"} clipboard={'@AmiCrafts'}/>
               </li>
               <li>
-                  <Contact title={"Email"} text={"Para encomendar algum projeto  específico mande uma mensagem para "} name={"amicrafts@encomendas.com"} href={"mailto:amicrafts@encomendas.com"}/>
+                  <Contact title={"Email"} text={"Para encomendar algum projeto  específico mande uma mensagem para "} name={"amicrafts@encomendas.com"} href={"mailto:amicrafts@encomendas.com"} clipboard={'amicrafts@encomendas.com'}/>
               </li>
               <li>
-                  <Contact title={"Telefone"} text={"Para  esclarecer qualquer dúvida por um processo mais direto, ligue para"} name={"(11) 91234- 5678"} href={"callto:(11) 91234- 5678"}/>
+                  <Contact title={"Telefone"} text={"Para  esclarecer qualquer dúvida por um processo mais direto, ligue para"} name={"(11) 91234- 5678"} href={"callto:(11) 91234- 5678"} clipboard={'(11) 91234- 5678'}/>
               </li>
               <li>
-                  <Contact title={"Loja Física"} text={"Para conhecer melhor nossa equipe, visite o nosso atelier no endereço"} name={"Rua Abc, 123 - Bairro Alfabeto (Cidade Z, MG)"} href={"#"}/>
+                  <Contact title={"Loja Física"} text={"Para conhecer melhor nossa equipe, visite o nosso atelier no endereço"} name={"Rua Abc, 123 - Bairro Alfabeto (Cidade Z, MG)"} href={"#"} clipboard={'Rua Abc, 123 - Bairro Alfabeto (Cidade Z, MG)'}/>
               </li>
           </ul>
         </div>

@@ -10,7 +10,7 @@ interface TitleServicesProps {
 export function TitleServices ({title}:TitleServicesProps){
     return(
         <div
-        className={`${kumbhsansBold.className} text-xl md:text-4xl  flex justify-center`}
+        className={`${kumbhsansBold.className} text-xl md:text-4xl flex justify-center`}
         > {title}</div>
     )
 }
