@@ -19,7 +19,7 @@ export default function CardProd ({src, alt,item, tamanho,valor}:CardProdProp){
             <div className="flex justify-center font-semibold py-2 text-center">
                 <p> {item} </p>
             </div>
-            <div className="flex justify-between">
+            <div className="flex p-3 justify-between">
                 <div>
                     <p >Tamanho:</p>
                     <p>Valor:</p>
