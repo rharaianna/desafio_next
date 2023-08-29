@@ -39,7 +39,7 @@ export default function Header() {
                     <Link className="hover:bg-amarelo hover:shadow-md py-1 px-4 rounded-xl" href={"/contatos"}>Contato</Link>
                     <Link className="hover:bg-verde hover:shadow-md py-1 px-4 rounded-xl" href={"/membros"}>Membros</Link>
                     <Link className="hover:bg-cinzaEsc hover:shadow-md py-1 px-4 rounded-xl" href={"login"}>Login</Link>
-                    <Link className="hover:bg-cinzaEsc hover:shadow-md py-1 px-4 rounded-xl" href={"/"}>Logout</Link>
+                    <Link  className="hover:bg-cinzaEsc hover:shadow-md py-1 px-4 rounded-xl" href={"/"}>Logout</Link>
                 </nav>
                 <Menu isVisible={isMenuOpen} onClose={closeMenu}/>
         </header>
