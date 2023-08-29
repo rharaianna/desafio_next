@@ -3,13 +3,12 @@
 'use client'
 
 import { BackPage } from "@/components/Icons/BackPage";
+import { DeleteIcon } from "@/components/Icons/Delete";
+import { Edit } from "@/components/Icons/Edit";
 import { NextPage } from "@/components/Icons/NextPage";
-import { TextServices } from "@/components/Text";
 import { TitleServices } from "@/components/Title";
 import InputServices from "@/components/teste";
-import TesteServices from "@/components/teste";
 import { useEffect, useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const API_URL = "http://localhost:3001/membros";
@@ -72,14 +71,12 @@ const handleSubmit = async (event: React.FormEvent) => {
 
   // Exibe um aviso de sucesso usando toast.
   if (res.ok) {
-    toast.success('Membro criado com sucesso!');
     // Limpa o estado do novo membro e atualiza a lista após a criação.
     setNewMembro({});
     getMembros();
   } else {
     // Em caso de erro, exibe um aviso de erro usando toast.
     console.error("Erro ao criar membro");
-    toast.error('Não foi possível criar o membro');
   }
 };
 
@@ -114,7 +111,6 @@ const handleSaveEdit = async (memberId: number) => {
 
   // Exibe um aviso de sucesso usando toast.
   if (res.ok) {
-    toast.success('Membro editado com sucesso!');
     // Limpa a edição, e atualiza a lista de membros após salvar.
     setEditMemberId(null);
     setNewMembro({});
@@ -122,7 +118,6 @@ const handleSaveEdit = async (memberId: number) => {
   } else {
     // Em caso de erro, exibe um aviso de erro usando toast.
     console.error("Erro ao editar membro");
-    toast.error('Não foi possível editar o membro');
   }
 };
 
@@ -139,13 +134,11 @@ const handleDelete = async (memberId: number) => {
 
     // Exibe um aviso de sucesso usando toast.
     if (res.ok) {
-      toast.success('Membro excluído com sucesso!');
       // Atualiza a lista de membros após excluir.
       getMembros();
     } else {
       // Em caso de erro, exibe um aviso de erro usando toast.
       console.error("Erro ao excluir membro");
-      toast.error('Não foi possível excluir o membro');
     }
   }
 };
@@ -192,7 +185,7 @@ const handleDelete = async (memberId: number) => {
                                        // no caso não terá valor, porque estamos criando um usuário novo
           onChange={handleInputChange} // Captura as mudanças de valor
         />
-        <button className="bg-rosa rounded-2xl shadow-md w-fit p-3" type="submit">Criar Membro</button>
+        <button className="bg-rosa hover:scale-90 rounded-2xl shadow-md w-fit p-3" type="submit">Criar Membro</button>
       </form>
       
 
@@ -210,7 +203,7 @@ const handleDelete = async (memberId: number) => {
         {membros.slice((paginaAtual-1) * membrosppag, paginaAtual * membrosppag).map((membro) => (
           <div key={membro.id}>
             {editMemberId === membro.id ? ( // Check se o membro está sendo editado
-              <div className="fixed backdrop:blur-xl inset-0 flex justify-center items-center bg-rosa  bg-opacity-50">
+              <div className="fixed backdrop:blur-xl inset-0 flex justify-center items-center bg-rosa  bg-opacity-25">
                 <div className="bg-cinza w-2/3 h-2/3 p-10 rounded-xl shadow-xl space-y-5">
                   <TitleServices title={"Editar membro"}/>
                   <div className="flex flex-wrap gap-3 justify-between">
@@ -219,7 +212,7 @@ const handleDelete = async (memberId: number) => {
                     <InputServices title={"Aniversário"} type={"text"} name={"aniversario"} placeholder={"Aniversario"} value={newMembro.aniversario || membro.aniversario} onChange={handleInputChange}/>
                     <InputServices title={"Cargo"} type={"text"} name={"cargo"} placeholder={"Cargo"} value={newMembro.cargo || membro.cargo} onChange={handleInputChange}/>
                   </div>
-                  <button className="bg-rosa rounded-2xl shadow-md w-fit p-3 " onClick={() => handleSaveEdit(membro.id)}>Save</button>
+                  <button className="bg-rosa hover:scale-90 rounded-2xl shadow-md w-fit p-3 " onClick={() => handleSaveEdit(membro.id)}>Salvar</button>
                 </div>
                 
               </div>
@@ -233,8 +226,12 @@ const handleDelete = async (memberId: number) => {
                     <div className=" truncate  col-span-2">{membro.aniversario}</div> {/* Exibe as informações dos membros */}
                     <div>{membro.cargo}</div> {/* Exibe as informações dos membros */}
                     <div className=" flex justify-end gap-2 col-span-2 w-40">
-                      <button className="bg-rosa  rounded-2xl shadow-md w-fit p-3" onClick={() => handleDelete(membro.id)}>Delete</button> {/* Botão individual para cada membro de deletar */}
-                      <button className="bg-rosa  rounded-2xl shadow-md w-fit p-3" onClick={() => handleEdit(membro.id)}>Edit</button> {/* Botão individual para cada membro de editar */}
+                      <button className="bg-rosa hover:scale-90  rounded-2xl shadow-md w-fit p-3" onClick={() => handleDelete(membro.id)}>
+                        <DeleteIcon/>
+                        </button> {/* Botão individual para cada membro de deletar */}
+                      <button className="bg-rosa hover:scale-90 rounded-2xl shadow-md w-fit p-3" onClick={() => handleEdit(membro.id)}>
+                        <Edit/>  
+                      </button> {/* Botão individual para cada membro de editar */}
                     </div>
                   </div>
               </div>
@@ -244,14 +241,14 @@ const handleDelete = async (memberId: number) => {
         
       </ul>
       <div className="flex justify-center pt-10">
-            <button className="bg-verde rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
+            <button className="bg-verde hover:scale-125 disabled:scale-100 rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
             onClick={()=> setPaginaAtual((paginaAtual)=> Math.max(paginaAtual-1,1))}
             disabled={paginaAtual===1}
             >
               <BackPage/>
             </button>
             <span className="px-3"> {paginaAtual} de {paginaTotal} </span>
-            <button className="bg-verde rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
+            <button className="bg-verde hover:scale-125 disabled:scale-100 rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
                onClick={()=> setPaginaAtual((paginaAtual)=> Math.min(paginaAtual+1,paginaTotal))}
                disabled={paginaAtual===paginaTotal}
             >

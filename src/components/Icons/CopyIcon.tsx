@@ -13,6 +13,7 @@ export const CopyIcon = ({ title, ...props }: CopyIconProps) => {
       height="1em"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
+      className='hover:scale-125'
     >
       {title && <title>{title}</title>}
       <path fill="none" d="M0 0h24v24H0z"></path>

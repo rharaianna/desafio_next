@@ -58,14 +58,14 @@ export default function Membros (){
             </div>
             <div>
         <div className="flex justify-center">
-            <button className="bg-verde rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
+            <button className="bg-verde rounded-full hover:scale-125 p-1 disabled:bg-cinzaEsc disabled:scale-100 disabled: verde"
             onClick={()=> setPaginaAtual((paginaAtual)=> Math.max(paginaAtual-1,1))}
             disabled={paginaAtual===1}
             >
               <BackPage/>
             </button>
             <span className="px-3"> {paginaAtual} de {paginaTotal} </span>
-            <button className="bg-verde rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
+            <button className="bg-verde hover:scale-125 disabled:scale-100 rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
                onClick={()=> setPaginaAtual((paginaAtual)=> Math.min(paginaAtual+1,paginaTotal))}
                disabled={paginaAtual===paginaTotal}
             >

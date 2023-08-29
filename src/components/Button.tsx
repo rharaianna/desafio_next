@@ -10,7 +10,7 @@ interface ButtonProps {
 
 export default function Button({text, href, type, onClick}:ButtonProps) {
     return (
-        <Link className="bg-rosa  rounded-2xl shadow-md w-fit p-3" href={href} type={type} onClick={onClick}>
+        <Link className="bg-rosa hover:scale-90 rounded-2xl shadow-md w-fit p-3" href={href} type={type} onClick={onClick}>
             {text}
         </Link>
     )}

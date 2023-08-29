@@ -2,6 +2,9 @@ import Link from "next/link";
 import { TextServices } from "./Text";
 import { TitleServices } from "./Title";
 import Image from "next/image";
+import { InstaIcon } from "./Icons/Insta";
+import { MailIcon } from "./Icons/Mail";
+import { PhoneIcon } from "./Icons/Phone";
 
 
 export default function Footer() {
@@ -15,13 +18,13 @@ export default function Footer() {
                     <h1 className="text-center font-bold pb-3">Contatos</h1>
                     <div className="flex items-center gap-5 text-md">
                         <Link href={"#"}>
-                            <Image width={30} height={30} src={"/instagram.png"} alt={"Instagram da AmiCrafts"}/>
+                            <InstaIcon/>
                         </Link>
                         <Link href={"#"}>
-                            <Image width={30} height={30} src={"/mail.png"} alt={"Instagram da AmiCrafts"}/>
+                            <MailIcon/>
                         </Link>
                         <Link href={"#"}>
-                            <Image width={18} height={30} src={"/phone.png"} alt={"Instagram da AmiCrafts"}/>
+                            <PhoneIcon/>
                         </Link>
                     </div>
                 </div>
