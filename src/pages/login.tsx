@@ -18,7 +18,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="items-center flex justify-center pb-6">
-                        <Button text={"Entrar"} href={"/gerenciamento"}/>
+                        <Button text={"Entrar"} href={"/gerenciar"}/>
                     </div>
                 </div>
             </div>

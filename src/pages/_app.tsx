@@ -13,9 +13,13 @@ const kumbhsans = Kumbh_Sans ({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={kumbhsans.className}>
-      <Header/>
-      <Component {...pageProps} />
-      <Footer/>
+      <div >
+        <div >
+          <Header/>
+          <Component {...pageProps} />
+        </div>
+        <Footer/>
+      </div>
     </div>
     )
 }

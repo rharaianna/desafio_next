@@ -1,0 +1,207 @@
+{
+  "membros": [
+    {
+      "id": 1,
+      "name": "Arthur Riccioppo Oliveira Pereira",
+      "email": "arthur.riccioppo@codejr.com.br",
+      "aniversario": "23/05",
+      "cargo": "gerente"
+    },
+    {
+      "id": 2,
+      "name": "Carlos Gustavo Ferreira Rezende",
+      "email": "carlos.gustavo@codejr.com.br",
+      "aniversario": "26/02",
+      "cargo": "gerente"
+    },
+    {
+      "id": 3,
+      "name": "Daniel Abib Brasil",
+      "email": "daniel.abib@codejr.com.br",
+      "aniversario": "18/12",
+      "cargo": "assessor"
+    },
+    {
+      "id": 4,
+      "name": "Daniel Alves Andrade",
+      "email": "daniel.alves@codejr.com.br",
+      "aniversario": "03/07",
+      "cargo": "gerente"
+    },
+    {
+      "id": 5,
+      "name": "Davi Kirchmaier Paiva",
+      "email": "davi.kirchmaier@codejr.com.br",
+      "aniversario": "15/04",
+      "cargo": "diretor"
+    },
+    {
+      "id": 6,
+      "name": "Emmanuel Gomes Nassif",
+      "email": "emmanuel.nassif@codejr.com.br",
+      "aniversario": "24/11",
+      "cargo": "gerente"
+    },
+    {
+      "id": 7,
+      "name": "Fabio do Vale Affonso",
+      "email": "fabio.vale@codejr.com.br",
+      "aniversario": "04/03",
+      "cargo": "assessor"
+    },
+    {
+      "id": 8,
+      "name": "Felipe Souza Magalhães Sant'Anna",
+      "email": "felipe.santanna@codejr.com.br",
+      "aniversario": "31/03",
+      "cargo": "gerente"
+    },
+    {
+      "id": 9,
+      "name": "Gabriel de Faria Salles ",
+      "email": "gabriel.faria@codejr.com.br",
+      "aniversario": "28/04",
+      "cargo": "assessor"
+    },
+    {
+      "id": 10,
+      "name": "Gabriel de Oliveira Vieira",
+      "email": "gabriel.vieira@codejr.com.br",
+      "aniversario": "27/07",
+      "cargo": "assessor"
+    },
+    {
+      "id": 11,
+      "name": "Gabriel Domingos de Souza",
+      "email": "gabriel.domingos@codejr.com.br",
+      "aniversario": "19/11",
+      "cargo": "assessor"
+    },
+    {
+      "id": 12,
+      "name": "Hugo Nogueira Carvalho",
+      "email": "hugo.carvalho@codejr.com.br",
+      "aniversario": "23/05",
+      "cargo": "diretor"
+    },
+    {
+      "id": 13,
+      "name": "João Vitor Fernandes Ribeiro Carneiro Ramos",
+      "email": "joaovitor.fernandes@codejr.com.br",
+      "aniversario": "16/9",
+      "cargo": "gerente"
+    },
+    {
+      "id": 14,
+      "name": "Leandro Alvares de Carvalho",
+      "email": "leandro.alvares@codejr.com.br",
+      "aniversario": "24/09",
+      "cargo": "assessor"
+    },
+    {
+      "id": 15,
+      "name": "Lucas Henrique de Arruda Ferreira",
+      "email": "lucas.arruda@codejr.com.br",
+      "aniversario": "01/11",
+      "cargo": "assessor"
+    },
+    {
+      "id": 16,
+      "name": "Luiz Henrique de Oliveira Pereira",
+      "email": "luiz.pereira@codejr.com.br",
+      "aniversario": "19/07",
+      "cargo": "assessor"
+    },
+    {
+      "id": 17,
+      "name": "Marlon Ruffo Nascimento",
+      "email": "marlon.ruffo@codejr.com.br",
+      "aniversario": "05/06",
+      "cargo": "gerente"
+    },
+    {
+      "id": 18,
+      "name": "Nicolas Soares Martins",
+      "email": "nicolas.soares@codejr.com.br",
+      "aniversario": "21/04",
+      "cargo": "diretor"
+    },
+    {
+      "id": 19,
+      "name": "Pedro do Couto Filgueiras",
+      "email": "pedro.couto@codejr.com.br",
+      "aniversario": "15/03",
+      "cargo": "diretor"
+    },
+    {
+      "id": 20,
+      "name": "Pedro Henrique Pascoalino Marques",
+      "email": "pedro.marques@codejr.com.br",
+      "aniversario": "28/09",
+      "cargo": "assessor"
+    },
+    {
+      "id": 21,
+      "name": "Quezia Emanuelly",
+      "email": "quezia.emanuelly@codejr.com.br ",
+      "aniversario": "29/11",
+      "cargo": "gerente"
+    },
+    {
+      "id": 22,
+      "name": "Rayane de Oliveira Ribeiro do Vale",
+      "email": "rayane.oliveira@codejr.com.br",
+      "aniversario": "15/04",
+      "cargo": "assessor"
+    },
+    {
+      "id": 23,
+      "name": "Rayssa Amaral Gomes",
+      "email": "rayssa.amaral@codejr.com.br",
+      "aniversario": "30/06",
+      "cargo": "assessor"
+    },
+    {
+      "id": 24,
+      "name": "Rhara Ianna Barcelos Costa",
+      "email": "rhara.ianna@codejr.com.br",
+      "aniversario": "29/11",
+      "cargo": "assessor"
+    },
+    {
+      "id": 25,
+      "name": "Ricardo Ervilha Silva",
+      "email": "ricardo.ervilha@codejr.com.br",
+      "aniversario": "14/03",
+      "cargo": "assessor"
+    },
+    {
+      "id": 26,
+      "name": "Sara Ingrid Sousa Oliveira Afonso",
+      "email": "sara.sousa@codejr.com.br",
+      "aniversario": "25/05",
+      "cargo": "assessor"
+    },
+    {
+      "id": 27,
+      "name": "Vitoria Cristina Nunes dos Santos ",
+      "email": "vitoria.nunes@codejr.com.br",
+      "aniversario": "19/07",
+      "cargo": "assessor"
+    },
+    {
+      "id": 28,
+      "name": "Vítor Fernandes Reis",
+      "email": "vitor.fernandes@codejr.com.br",
+      "aniversario": "22/07",
+      "cargo": "assessor"
+    },
+    {
+      "id": 29,
+      "name": "Victoria Tiemi Ferreira Yamashita",
+      "email": "victoria.tiemi@codejr.com.br",
+      "aniversario": "01/01",
+      "cargo": "assessor"
+    }
+  ]
+}

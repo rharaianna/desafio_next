@@ -15,7 +15,7 @@ export default function Home() {
         />
       </Head>
     
-      <div className='py-12 px-6 md:px-32 space-y-10 md:space-y-20'>
+      <div className='py-12 px-6 md:px-30 space-y-10 md:space-y-20'>
         <AboutMe/>
         <Produtos/>
       </div>

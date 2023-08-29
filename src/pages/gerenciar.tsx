@@ -2,6 +2,8 @@
 
 'use client'
 
+import { BackPage } from "@/components/Icons/BackPage";
+import { NextPage } from "@/components/Icons/NextPage";
 import { TitleServices } from "@/components/Title";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
@@ -23,7 +25,9 @@ export default function Home() {
   const [membros, setMembros] = useState<Membro[]>([]);
   const [newMembro, setNewMembro] = useState<Partial<Membro>>({}); // Tipo parcial, pois não temos todos os dados do membro
   const [editMemberId, setEditMemberId] = useState<number | null>(null); // Membro que está sendo editado
-
+  const membrosppag = 10
+  const [paginaAtual, setPaginaAtual] = useState<number>(1);
+  const paginaTotal = Math.ceil(membros.length / membrosppag)
 
 // https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating
 // Função assíncrona para buscar membros da API.
@@ -187,7 +191,7 @@ const handleDelete = async (memberId: number) => {
         />
         <button className="bg-rosa rounded-2xl shadow-md w-fit p-3" type="submit">Criar Membro</button>
       </form>
-      <div className="bg-amarelo text-left px-6 pb-2 flex justify-center rounded-t-lg ">
+      <div className="overflow-x-scroll bg-amarelo text-left px-6 pb-2 flex justify-center rounded-t-lg ">
         <div className="grid grid-cols-12 items-center gap-2 space-y-3">
           <div>#</div>
           <div className=" truncate col-span-3">nome</div>
@@ -198,8 +202,8 @@ const handleDelete = async (memberId: number) => {
         </div>
       </div>
 
-      <ul>
-        {membros?.map((membro) => (
+      <ul className="overflow-x-scroll ">
+        {membros.slice((paginaAtual-1) * membrosppag, paginaAtual * membrosppag).map((membro) => (
           <div key={membro.id}>
             {editMemberId === membro.id ? ( // Check se o membro está sendo editado
               <div className="">
@@ -252,7 +256,23 @@ const handleDelete = async (memberId: number) => {
             )}
           </div>
         ))}
+        
       </ul>
+      <div className="flex justify-center pt-10">
+            <button className="bg-verde rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
+            onClick={()=> setPaginaAtual((paginaAtual)=> Math.max(paginaAtual-1,1))}
+            disabled={paginaAtual===1}
+            >
+              <BackPage/>
+            </button>
+            <span className="px-3"> {paginaAtual} de {paginaTotal} </span>
+            <button className="bg-verde rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
+               onClick={()=> setPaginaAtual((paginaAtual)=> Math.min(paginaAtual+1,paginaTotal))}
+               disabled={paginaAtual===paginaTotal}
+            >
+              <NextPage/>
+            </button>
+        </div>
     </div>
   );
 }
