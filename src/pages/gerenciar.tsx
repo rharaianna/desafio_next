@@ -4,7 +4,10 @@
 
 import { BackPage } from "@/components/Icons/BackPage";
 import { NextPage } from "@/components/Icons/NextPage";
+import { TextServices } from "@/components/Text";
 import { TitleServices } from "@/components/Title";
+import InputServices from "@/components/teste";
+import TesteServices from "@/components/teste";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -191,51 +194,33 @@ const handleDelete = async (memberId: number) => {
         />
         <button className="bg-rosa rounded-2xl shadow-md w-fit p-3" type="submit">Criar Membro</button>
       </form>
-      <div className="overflow-x-scroll bg-amarelo text-left px-6 pb-2 flex justify-center rounded-t-lg ">
-        <div className="grid grid-cols-12 items-center gap-2 space-y-3">
-          <div>#</div>
-          <div className=" truncate col-span-3">nome</div>
-          <div className=" truncate col-span-3">email</div>
-          <div className=" truncate col-span-2">aniversário</div>
-          <div>cargo</div>
-          <div className="col-span-2 w-40 text-center">ações</div>
-        </div>
-      </div>
+      
 
-      <ul className="overflow-x-scroll ">
+      <ul className=" overflow-x-scroll ">
+        <div className=" bg-amarelo text-left px-6 pb-2 flex justify-center rounded-t-lg ">
+          <div className="grid grid-cols-12 items-center gap-2 space-y-3">
+            <div>#</div>
+            <div className=" truncate col-span-3">nome</div>
+            <div className=" truncate col-span-3">email</div>
+            <div className=" truncate col-span-2">aniversário</div>
+            <div>cargo</div>
+            <div className="col-span-2 w-40 text-center">ações</div>
+          </div>
+        </div>
         {membros.slice((paginaAtual-1) * membrosppag, paginaAtual * membrosppag).map((membro) => (
           <div key={membro.id}>
             {editMemberId === membro.id ? ( // Check se o membro está sendo editado
-              <div className="">
-                <input 
-                  type="text" // Tipo de dado que será inserido e validado no input
-                  name="name" // Nome do input para o javascript reconhecer os valores
-                  placeholder="Name" 
-                  value={newMembro.name || membro.name} // Mostra valores originais do membro
-                  onChange={handleInputChange} // Captura as mudanças de valor
-                />
-                <input
-                  type="text" // Tipo de dado que será inserido e validado no input
-                  name="email" // Nome do input para o javascript reconhecer os valores
-                  placeholder="Email" 
-                  value={newMembro.email || membro.email} // Mostra valores originais do membro
-                  onChange={handleInputChange} // Captura as mudanças de valor
-                />
-                <input
-                  type="text" // Tipo de dado que será inserido e validado no input
-                  name="aniversario" // Nome do input para o javascript reconhecer os valores
-                  placeholder="Aniversario" 
-                  value={newMembro.aniversario || membro.aniversario} // Mostra valores originais do membro
-                  onChange={handleInputChange} // Captura as mudanças de valor
-                />
-                <input
-                  type="text" // Tipo de dado que será inserido e validado no input
-                  name="cargo" // Nome do input para o javascript reconhecer os valores
-                  placeholder="Cargo" 
-                  value={newMembro.cargo || membro.cargo} // Mostra valores originais do membro
-                  onChange={handleInputChange} // Captura as mudanças de valor
-                />
-                <button className="bg-rosa  rounded-2xl shadow-md w-fit p-3" onClick={() => handleSaveEdit(membro.id)}>Save</button>
+              <div className="fixed backdrop:blur-xl inset-0 flex justify-center items-center bg-rosa  bg-opacity-50">
+                <div className="bg-cinza w-2/3 h-2/3 p-10 rounded-xl shadow-xl space-y-5">
+                  <TitleServices title={"Editar membro"}/>
+                  <div className="flex flex-wrap gap-3 justify-between">
+                    <InputServices title={"Nome"} type={"text"} name={"name"} placeholder={"Nome"} value={newMembro.name || membro.name} onChange={handleInputChange}/>
+                    <InputServices title={"Email"} type={"text"} name={"email"} placeholder={"Email"} value={newMembro.email || membro.email} onChange={handleInputChange}/>
+                    <InputServices title={"Aniversário"} type={"text"} name={"aniversario"} placeholder={"Aniversario"} value={newMembro.aniversario || membro.aniversario} onChange={handleInputChange}/>
+                    <InputServices title={"Cargo"} type={"text"} name={"cargo"} placeholder={"Cargo"} value={newMembro.cargo || membro.cargo} onChange={handleInputChange}/>
+                  </div>
+                  <button className="bg-rosa rounded-2xl shadow-md w-fit p-3 " onClick={() => handleSaveEdit(membro.id)}>Save</button>
+                </div>
                 
               </div>
               
