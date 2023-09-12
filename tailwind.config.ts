@@ -12,6 +12,7 @@ const config: Config = {
       md: '768px',
       lg: '976px',
       xl: '1440px',
+      'ctt':{'max': '768px'}
     },
     colors: {
       'rosa': '#FFC7DB',

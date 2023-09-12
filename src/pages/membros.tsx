@@ -10,6 +10,7 @@ const API_URL = "http://localhost:3001/membros";
 type Membro = {
   userId: number,
   id: number,
+  imagem: string,
   name: string,
   email: string,
   aniversario: string,
@@ -49,10 +50,10 @@ export default function Membros (){
     return (
         <div className="py-12 px-6 md:px-32 space-y-10 md:space-y-20">
             <TitleServices title={"Membros"}/>
-            <div className="flex flex-wrap gap-5 md:px-32 justify-center">
+            <div className="flex flex-wrap gap-5 md:px-32 justify-center ctt:block ctt:space-y-7">
                 {membros.slice((paginaAtual-1) * membrosppag, paginaAtual * membrosppag)?.map((membro) => (
                 <>
-                <CardMemb nome={membro.name} src={"/ana.png"} alt={""} cargo={membro.cargo} email={membro.email} />
+                <CardMemb nome={membro.name} src={membro.imagem} alt={""} cargo={membro.cargo} email={membro.email} />
                 </>
                 ))}
             </div>

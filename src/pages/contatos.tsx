@@ -12,10 +12,12 @@ export default function Contatos() {
       <Head>
         <title> Contatos | Amicrafts </title>
       </Head>
-      <div className='py-12 px-6 md:px-32 space-y-10 md:space-y-10'>
+
+      <div className='py-12 px-6 md:px-32  space-y-10 md:space-y-10'>
         <TitleServices title={'Entre em contato'}></TitleServices>
+        <Image className='md:hidden  block m-auto' src={'/Group 20.png'} alt={''} width={150} height={100} unoptimized/>
         <div className=" flex justify-center">
-          <Image src={'/colorphone.png'} alt={''} width={250} height={100}/>
+          <Image className='ctt:hidden' src={'/colorphone.png'} alt={''} width={250} height={100}/>
           <ul className='bg-cinza rounded-r-lg p-6 shadow-md'>
               <li>
                   <Contact title={"Instagram"} text={"Para conhecer mais sobre os nossos últimos projetos, encontre-nos com o "} name={"@AmiCrafts"} href={"#"} clipboard={'@AmiCrafts'}/>
@@ -32,11 +34,6 @@ export default function Contatos() {
           </ul>
         </div>
       </div>
-
-    
-      <main>
-        
-      </main>
     </>
   )
 }

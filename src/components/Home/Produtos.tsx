@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 import { BackPage } from "../Icons/BackPage";
 import { NextPage } from "../Icons/NextPage";
 import { TitleServices } from "../Title";
-import CardProd from "./Card";
 import Link from "next/link";
+import Image from "next/image";
+
 
 type Produto = {
   id: number,
+  imagem: string,
   name: string,
   tamanho: string,
   preco: string,
@@ -15,7 +17,7 @@ type Produto = {
 
 export default function Produtos() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
-    const membrosppag = 10
+    const membrosppag = 6
     const [paginaAtual, setPaginaAtual] = useState<number>(1);
     const paginaTotal = Math.ceil(produtos.length / membrosppag)
 
@@ -37,64 +39,65 @@ export default function Produtos() {
     // Chama a função getProdutos para buscar Produtos da API.
     useEffect(() => {
       getProdutos();
+      console.log(produtos)
     }, []);
 
     return (
-        <div>
+        <div className="mx-32">
             <div className="pb-12">
                 <TitleServices title={"Produtos"}/>
             </div>
-            <div className="flex flex-wrap gap-5 md:px-28 justify-center">
-              <CardProd src={"/coelho.png"} alt={""} item={"telefone"} tamanho={"a"} valor={"w"} />
+
+            <div className="flex flex-wrap gap-8 justify-center">
+              {produtos.slice((paginaAtual-1) * membrosppag, paginaAtual * membrosppag).map((produto) => (
+              <div className="" key={produto.id}>
+                <Link href={"#"} className="bg-amarelo hover:brightness-110 hover:scale-105 flex justify-center flex-col shadow-lg p-3 rounded-lg ">
+                   
+                      <Image className="md:w-40  block m-auto pb-3" src={produto.imagem} width={"120"} height={"120"} alt={""}/>
+                   
+                    
+                    <div>
+                        <h3 className="flex justify-center font-semibold md:py-2 text-center truncate col-span-3">{produto.name}</h3>
+                       
+                        <div className="flex p-3 justify-center space-x-4">
+                            <div>
+                                <p >Valor:</p>
+                                <p>Tamanho:</p>
+                            </div>
+
+                            <div >
+                              <div className=" truncate  text-right col-span-3"> R$ {produto.preco}</div> 
+                              <div className=" truncate text-right col-span-2"> {produto.tamanho}</div> 
+                            </div>
+                        </div>
+
+                    </div>
+                </Link>
+              </div>
+                      ))}
             </div>
 
-            {produtos.slice((paginaAtual-1) * membrosppag, paginaAtual * membrosppag).map((produto) => (
-            <div className="flex flex-wrap gap-5 md:px-28 justify-center bg-rosa" key={produto.id}>
-              <Link href={"#"} className="bg-amarelo hover:brightness-110 hover:scale-105 flex md:flex-col shadow-lg p-3 rounded-lg">
-                  <div className="shadow-inner rounded-lg w-fit">
-                            imagem
-                  </div>
-                  <div>
-                      <div className="flex justify-center font-semibold py-2 text-center">
-                        <div className=" truncate col-span-3">{produto.name}</div>
-                      </div>
-              
-                      <div className="flex p-3 justify-between">
-                          <div>
-                              <p >Tamanho:</p>
-                              <p>Valor:</p>
-                          </div>
-                          <div >
-                            <div className=" truncate col-span-3"> R$ {produto.preco}</div> {/* Exibe as informações dos produtos */}
-                            <div className=" truncate  col-span-2"> {produto.tamanho}</div> {/* Exibe as informações dos produtos */}
-                          </div>
-                      </div>
-                  </div>
-              </Link>
-            
-
 
             
-          </div>
-        ))}
-
-
-            
-            <div className="flex justify-center pt-10">
-            <button className="bg-verde rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
-            onClick={()=> setPaginaAtual((paginaAtual)=> Math.max(paginaAtual-1,1))}
-            disabled={paginaAtual===1}
-            >
-              <BackPage/>
-            </button>
-            <span className="px-3"> {paginaAtual} de {paginaTotal} </span>
-            <button className="bg-verde rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
-               onClick={()=> setPaginaAtual((paginaAtual)=> Math.min(paginaAtual+1,paginaTotal))}
-               disabled={paginaAtual===paginaTotal}
-            >
-              <NextPage/>
-            </button>
+            <div className="flex justify-center ">
+              <div className="flex justify-center pt-10">
+                <button className="bg-verde rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
+                onClick={()=> setPaginaAtual((paginaAtual)=> Math.max(paginaAtual-1,1))}
+                disabled={paginaAtual===1}
+                >
+                  <BackPage/>
+                </button>
+                <span className="px-3 w-32 text-center "> {paginaAtual} de {paginaTotal} </span>
+                <button className="bg-verde rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
+                 onClick={()=> setPaginaAtual((paginaAtual)=> Math.min(paginaAtual+1,paginaTotal))}
+                 disabled={paginaAtual===paginaTotal}
+                >
+                  <NextPage/>
+                </button>
+              </div>
+            </div>
         </div>
-        </div>
+
+        
     )
 }

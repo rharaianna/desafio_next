@@ -218,14 +218,14 @@ const handleDelete = async (memberId: number) => {
               </div>
               
             ) : (
-              <div className=" text-left text-sm flex justify-center ">
+              <div className=" text-left  text-sm flex justify-center ">
                   <div className="bg-cinza px-8 pb-5 rounded-b-lg grid grid-cols-12 items-center gap-2 space-y-3">
                     <div >{membro.id}</div>  {/* Exibe as informações dos membros */}
-                    <div className=" truncate col-span-3">{membro.name}</div> {/* Exibe as informações dos membros */}
-                    <div className=" truncate col-span-3">{membro.email}</div> {/* Exibe as informações dos membros */}
+                    <div className=" truncate  col-span-3">{membro.name}</div> {/* Exibe as informações dos membros */}
+                    <div className=" truncate  col-span-3">{membro.email}</div> {/* Exibe as informações dos membros */}
                     <div className=" truncate  col-span-2">{membro.aniversario}</div> {/* Exibe as informações dos membros */}
                     <div>{membro.cargo}</div> {/* Exibe as informações dos membros */}
-                    <div className=" flex justify-end gap-2 col-span-2 w-40">
+                    <div className=" flex flex-col justify-end items-center gap-2 col-span-2 w-40">
                       <button className="bg-rosa hover:scale-90  rounded-2xl shadow-md w-fit p-3" onClick={() => handleDelete(membro.id)}>
                         <DeleteIcon/>
                         </button> {/* Botão individual para cada membro de deletar */}
