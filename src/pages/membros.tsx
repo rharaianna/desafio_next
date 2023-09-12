@@ -4,6 +4,7 @@ import { BackPage } from "@/components/Icons/BackPage";
 import { NextPage } from "@/components/Icons/NextPage";
 import { TitleServices } from "@/components/Title";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const API_URL = "http://localhost:3001/membros";
 
@@ -49,11 +50,12 @@ export default function Membros (){
       }, []);
     return (
         <div className="py-12 px-6 md:px-32 space-y-10 md:space-y-20">
+            <Image unoptimized className="fixed top-20 -z-20 md:w-[30%] right-3 ctt:-right-1 "src={"/agulha.png"} alt={""} width={200} height={200}/>
             <TitleServices title={"Membros"}/>
             <div className="flex flex-wrap gap-5 md:px-32 justify-center ctt:block ctt:space-y-7">
                 {membros.slice((paginaAtual-1) * membrosppag, paginaAtual * membrosppag)?.map((membro) => (
                 <>
-                <CardMemb nome={membro.name} src={membro.imagem} alt={""} cargo={membro.cargo} email={membro.email} />
+                <CardMemb nome={membro.name} src={"/profile.png"} alt={""} cargo={membro.cargo} email={membro.email} />
                 </>
                 ))}
             </div>

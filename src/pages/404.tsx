@@ -2,7 +2,6 @@ import Button from "@/components/Button";
 import { TitleServices } from "@/components/Title";
 import  Head  from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 
 
 export default function NotFound() {

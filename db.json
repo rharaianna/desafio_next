@@ -1,244 +1,242 @@
 {
-    "membros": [
-      {
-        "id": 2,
-        "imagem": "/",
-        "name": "mudoueu aa",
-        "email": "rharaianna@gmail.com",
-        "aniversario": "21/11",
-        "cargo": "we"
-      },
-      {
-        "id": 3,
-        "imagem": "/",
-        "name": "Daniel Abib Brasil",
-        "email": "daniel.abib@codejr.com.br",
-        "aniversario": "18/12",
-        "cargo": "assessor"
-      },
-      {
-        "id": 4,
-        "imagem": "/",
-        "name": "Daniel Alves Andrade",
-        "email": "daniel.alves@codejr.com.br",
-        "aniversario": "03/07",
-        "cargo": "gerente"
-      },
-      {
-        "id": 5,
-        "imagem": "/",
-        "name": "Davi Kirchmaier Paiva",
-        "email": "davi.kirchmaier@codejr.com.br",
-        "aniversario": "15/04",
-        "cargo": "diretor"
-      },
-      {
-        "id": 6,
-        "imagem": "/",
-        "name": "Emmanuel Gomes Nassif",
-        "email": "emmanuel.nassif@codejr.com.br",
-        "aniversario": "24/11",
-        "cargo": "gerente"
-      },
-      {
-        "id": 7,
-        "imagem": "/",
-        "name": "Fabio do Vale Affonso",
-        "email": "fabio.vale@codejr.com.br",
-        "aniversario": "04/03",
-        "cargo": "assessor"
-      },
-      {
-        "id": 8,
-        "imagem": "/",
-        "name": "Felipe Souza Magalhães Sant'Anna",
-        "email": "felipe.santanna@codejr.com.br",
-        "aniversario": "31/03",
-        "cargo": "gerente"
-      },
-      {
-        "id": 9,
-        "imagem": "/",
-        "name": "Gabriel de Faria Salles ",
-        "email": "gabriel.faria@codejr.com.br",
-        "aniversario": "28/04",
-        "cargo": "assessor"
-      },
-      {
-        "id": 10,
-        "imagem": "/",
-        "name": "Gabriel de Oliveira Vieira",
-        "email": "gabriel.vieira@codejr.com.br",
-        "aniversario": "27/07",
-        "cargo": "assessor"
-      },
-      {
-        "id": 11,
-        "imagem": "/",
-        "name": "Gabriel Domingos de Souza",
-        "email": "gabriel.domingos@codejr.com.br",
-        "aniversario": "19/11",
-        "cargo": "assessor"
-      },
-      {
-        "id": 12,
-        "imagem": "/",
-        "name": "Hugo Nogueira Carvalho",
-        "email": "hugo.carvalho@codejr.com.br",
-        "aniversario": "23/05",
-        "cargo": "diretor"
-      },
-      {
-        "id": 13,
-        "imagem": "/",
-        "name": "João Vitor Fernandes Ribeiro Carneiro Ramos",
-        "email": "joaovitor.fernandes@codejr.com.br",
-        "aniversario": "16/9",
-        "cargo": "gerente"
-      },
-      {
-        "id": 14,
-        "imagem": "/",
-        "name": "Leandro Alvares de Carvalho",
-        "email": "leandro.alvares@codejr.com.br",
-        "aniversario": "24/09",
-        "cargo": "assessor"
-      },
-      {
-        "id": 15,
-        "imagem": "/",
-        "name": "Lucas Henrique de Arruda Ferreira",
-        "email": "lucas.arruda@codejr.com.br",
-        "aniversario": "01/11",
-        "cargo": "assessor"
-      },
-      {
-        "id": 16,
-        "imagem": "/",
-        "name": "Luiz Henrique de Oliveira Pereira",
-        "email": "luiz.pereira@codejr.com.br",
-        "aniversario": "19/07",
-        "cargo": "assessor"
-      },
-      {
-        "id": 17,
-        "imagem": "/",
-        "name": "Marlon Ruffo Nascimento",
-        "email": "marlon.ruffo@codejr.com.br",
-        "aniversario": "05/06",
-        "cargo": "gerente"
-      },
-      {
-        "id": 18,
-        "imagem": "/",
-        "name": "Nicolas Soares Martins",
-        "email": "nicolas.soares@codejr.com.br",
-        "aniversario": "21/04",
-        "cargo": "diretor"
-      },
-      {
-        "id": 19,
-        "imagem": "/",
-        "name": "Pedro do Couto Filgueiras",
-        "email": "pedro.couto@codejr.com.br",
-        "aniversario": "15/03",
-        "cargo": "diretor"
-      },
-      {
-        "id": 20,
-        "imagem": "/",
-        "name": "Pedro Henrique Pascoalino Marques",
-        "email": "pedro.marques@codejr.com.br",
-        "aniversario": "28/09",
-        "cargo": "assessor"
-      }
-      
-    ],
-      "produtos":[
-        {
-          "id": 1,
-          "imagem": "/coelho.png",
-          "name": "Coelho",
-          "tamanho": "20cm2",
-          "preco": "20"
-        },
-        {
-          "id": 2,
-          "imagem": "/dragao.png"  ,
-          "name": "Dragão",
-          "tamanho": "40cm2",
-          "preco": "60"
-        },
-        {
-          "id": 3,
-          "imagem": "/coelhocartola.png"  ,
-          "name": "Coelho de Cartola",
-          "tamanho": "60cm2",
-          "preco": "100"
-        },
-        {
-          "id": 4,
-          "imagem": "/girafa.png"  ,
-          "name": "Girafa",
-          "tamanho": "70cm2",
-          "preco": "100"
-        },
-        {
-          "id": 5,
-          "imagem": "/raposa.png"  ,
-          "name": "Raposa",
-          "tamanho": "20cm2",
-          "preco": "40"
-        },
-        {
-          "id": 6,
-          "imagem": "/stitch.png"  ,
-          "name": "Stitch",
-          "tamanho": "2cm",
-          "preco": "20"
-        },
-        {
-          "id": 7,
-          "imagem": "/elefante.png"  ,
-          "name": "Elefante",
-          "tamanho": "2cm",
-          "preco": "20"
-        },
-        {
-          "id": 8,
-          "imagem": "/rato.png"  ,
-          "name": "Rato",
-          "tamanho": "2cm",
-          "preco": "20"
-        },
-        {
-          "id": 9,
-          "imagem": "/gato.png"  ,
-          "name": "Gato",
-          "tamanho": "2cm",
-          "preco": "20"
-        },
-        {
-          "id": 10,
-          "imagem": "/lhama.png"  ,
-          "name": "Lhama",
-          "tamanho": "20cm2",
-          "preco": "20"
-        },
-        {
-          "id": 11,
-          "imagem": "/merida.png"  ,
-          "name": "Merida",
-          "tamanho": "2cm",
-          "preco": "20"
-        },
-        {
-          "id": 12,
-          "imagem": "/coala.png"  ,
-          "name": "Coala",
-          "tamanho": "2cm",
-          "preco": "20"
-        }
-        
-      ]
-  }
+  "membros": [
+    {
+      "id": 2,
+      "imagem": "/",
+      "name": "mudoueu aa",
+      "email": "rharaianna@gmail.com",
+      "aniversario": "21/11",
+      "cargo": "we"
+    },
+    {
+      "id": 3,
+      "imagem": "/",
+      "name": "Daniel Abib Brasil",
+      "email": "daniel.abib@codejr.com.br",
+      "aniversario": "18/12",
+      "cargo": "assessor"
+    },
+    {
+      "id": 4,
+      "imagem": "/",
+      "name": "Daniel Alves Andrade",
+      "email": "daniel.alves@codejr.com.br",
+      "aniversario": "03/07",
+      "cargo": "gerente"
+    },
+    {
+      "id": 5,
+      "imagem": "/",
+      "name": "Davi Kirchmaier Paiva",
+      "email": "davi.kirchmaier@codejr.com.br",
+      "aniversario": "15/04",
+      "cargo": "diretor"
+    },
+    {
+      "id": 6,
+      "imagem": "/",
+      "name": "Emmanuel Gomes Nassif",
+      "email": "emmanuel.nassif@codejr.com.br",
+      "aniversario": "24/11",
+      "cargo": "gerente"
+    },
+    {
+      "id": 7,
+      "imagem": "/",
+      "name": "Fabio do Vale Affonso",
+      "email": "fabio.vale@codejr.com.br",
+      "aniversario": "04/03",
+      "cargo": "assessor"
+    },
+    {
+      "id": 8,
+      "imagem": "/",
+      "name": "Felipe Souza Magalhães Sant'Anna",
+      "email": "felipe.santanna@codejr.com.br",
+      "aniversario": "31/03",
+      "cargo": "gerente"
+    },
+    {
+      "id": 9,
+      "imagem": "/",
+      "name": "Gabriel de Faria Salles ",
+      "email": "gabriel.faria@codejr.com.br",
+      "aniversario": "28/04",
+      "cargo": "assessor"
+    },
+    {
+      "id": 10,
+      "imagem": "/",
+      "name": "Gabriel de Oliveira Vieira",
+      "email": "gabriel.vieira@codejr.com.br",
+      "aniversario": "27/07",
+      "cargo": "assessor"
+    },
+    {
+      "id": 11,
+      "imagem": "/",
+      "name": "Gabriel Domingos de Souza",
+      "email": "gabriel.domingos@codejr.com.br",
+      "aniversario": "19/11",
+      "cargo": "assessor"
+    },
+    {
+      "id": 12,
+      "imagem": "/",
+      "name": "Hugo Nogueira Carvalho",
+      "email": "hugo.carvalho@codejr.com.br",
+      "aniversario": "23/05",
+      "cargo": "diretor"
+    },
+    {
+      "id": 13,
+      "imagem": "/",
+      "name": "João Vitor Fernandes Ribeiro Carneiro Ramos",
+      "email": "joaovitor.fernandes@codejr.com.br",
+      "aniversario": "16/9",
+      "cargo": "gerente"
+    },
+    {
+      "id": 14,
+      "imagem": "/",
+      "name": "Leandro Alvares de Carvalho",
+      "email": "leandro.alvares@codejr.com.br",
+      "aniversario": "24/09",
+      "cargo": "assessor"
+    },
+    {
+      "id": 15,
+      "imagem": "/",
+      "name": "Lucas Henrique de Arruda Ferreira",
+      "email": "lucas.arruda@codejr.com.br",
+      "aniversario": "01/11",
+      "cargo": "assessor"
+    },
+    {
+      "id": 16,
+      "imagem": "/",
+      "name": "Luiz Henrique de Oliveira Pereira",
+      "email": "luiz.pereira@codejr.com.br",
+      "aniversario": "19/07",
+      "cargo": "assessor"
+    },
+    {
+      "id": 17,
+      "imagem": "/",
+      "name": "Marlon Ruffo Nascimento",
+      "email": "marlon.ruffo@codejr.com.br",
+      "aniversario": "05/06",
+      "cargo": "gerente"
+    },
+    {
+      "id": 18,
+      "imagem": "/",
+      "name": "Nicolas Soares Martins",
+      "email": "nicolas.soares@codejr.com.br",
+      "aniversario": "21/04",
+      "cargo": "diretor"
+    },
+    {
+      "id": 19,
+      "imagem": "/",
+      "name": "Pedro do Couto Filgueiras",
+      "email": "pedro.couto@codejr.com.br",
+      "aniversario": "15/03",
+      "cargo": "diretor"
+    },
+    {
+      "id": 20,
+      "imagem": "/",
+      "name": "Pedro Henrique Pascoalino Marques",
+      "email": "pedro.marques@codejr.com.br",
+      "aniversario": "28/09",
+      "cargo": "assessor"
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "imagem": "/coelho.png",
+      "name": "Coelho",
+      "tamanho": "20cm2",
+      "preco": "20"
+    },
+    {
+      "id": 2,
+      "imagem": "/dragao.png",
+      "name": "Dragão",
+      "tamanho": "40cm2",
+      "preco": "60"
+    },
+    {
+      "id": 3,
+      "imagem": "/coelhocartola.png",
+      "name": "Coelho de Cartola",
+      "tamanho": "60cm2",
+      "preco": "100"
+    },
+    {
+      "id": 4,
+      "imagem": "/girafa.png",
+      "name": "Girafa",
+      "tamanho": "70cm2",
+      "preco": "100"
+    },
+    {
+      "id": 5,
+      "imagem": "/raposa.png",
+      "name": "Raposa",
+      "tamanho": "20cm2",
+      "preco": "40"
+    },
+    {
+      "id": 6,
+      "imagem": "/stitch.png",
+      "name": "Stitch",
+      "tamanho": "2cm",
+      "preco": "20"
+    },
+    {
+      "id": 7,
+      "imagem": "/elefante.png",
+      "name": "Elefante",
+      "tamanho": "2cm",
+      "preco": "20"
+    },
+    {
+      "id": 8,
+      "imagem": "/rato.png",
+      "name": "Rato",
+      "tamanho": "2cm",
+      "preco": "20"
+    },
+    {
+      "id": 9,
+      "imagem": "/gato.png",
+      "name": "Gato",
+      "tamanho": "2cm",
+      "preco": "20"
+    },
+    {
+      "id": 10,
+      "imagem": "/lhama.png",
+      "name": "Lhama",
+      "tamanho": "20cm2",
+      "preco": "20"
+    },
+    {
+      "id": 11,
+      "imagem": "/merida.png",
+      "name": "Merida",
+      "tamanho": "2cm",
+      "preco": "20"
+    },
+    {
+      "id": 12,
+      "imagem": "/coala.png",
+      "name": "Coala",
+      "tamanho": "2cm",
+      "preco": "20"
+    }
+  ]
+}
