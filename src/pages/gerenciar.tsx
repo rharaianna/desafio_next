@@ -189,57 +189,40 @@ const handleDelete = async (memberId: number) => {
       </form>
       
 
-      <ul className=" overflow-x-scroll ">
-        <div className=" bg-amarelo text-left px-6 pb-2 flex justify-center rounded-t-lg ">
-          <div className="grid grid-cols-12 items-center gap-2 space-y-3">
-            <div>#</div>
-            <div className=" truncate col-span-3">nome</div>
-            <div className=" truncate col-span-3">email</div>
-            <div className=" truncate col-span-2">aniversário</div>
-            <div>cargo</div>
-            <div className="col-span-2 w-40 text-center">ações</div>
-          </div>
-        </div>
-        {membros.slice((paginaAtual-1) * membrosppag, paginaAtual * membrosppag).map((membro) => (
-          <div key={membro.id}>
-            {editMemberId === membro.id ? ( // Check se o membro está sendo editado
-              <div className="fixed backdrop:blur-xl inset-0 flex justify-center items-center bg-rosa  bg-opacity-25">
-                <div className="bg-cinza w-2/3 h-2/3 p-10 rounded-xl shadow-xl space-y-5">
-                  <TitleServices title={"Editar membro"}/>
-                  <div className="flex flex-wrap gap-3 justify-between">
-                    <InputServices title={"Nome"} type={"text"} name={"name"} placeholder={"Nome"} value={newMembro.name || membro.name} onChange={handleInputChange}/>
-                    <InputServices title={"Email"} type={"text"} name={"email"} placeholder={"Email"} value={newMembro.email || membro.email} onChange={handleInputChange}/>
-                    <InputServices title={"Aniversário"} type={"text"} name={"aniversario"} placeholder={"Aniversario"} value={newMembro.aniversario || membro.aniversario} onChange={handleInputChange}/>
-                    <InputServices title={"Cargo"} type={"text"} name={"cargo"} placeholder={"Cargo"} value={newMembro.cargo || membro.cargo} onChange={handleInputChange}/>
-                  </div>
-                  <button className="bg-rosa hover:scale-90 rounded-2xl shadow-md w-fit p-3 " onClick={() => handleSaveEdit(membro.id)}>Salvar</button>
-                </div>
-                
-              </div>
-              
-            ) : (
-              <div className=" text-left  text-sm flex justify-center ">
-                  <div className="bg-cinza px-8 pb-5 rounded-b-lg grid grid-cols-12 items-center gap-2 space-y-3">
-                    <div >{membro.id}</div>  {/* Exibe as informações dos membros */}
-                    <div className=" truncate  col-span-3">{membro.name}</div> {/* Exibe as informações dos membros */}
-                    <div className=" truncate  col-span-3">{membro.email}</div> {/* Exibe as informações dos membros */}
-                    <div className=" truncate  col-span-2">{membro.aniversario}</div> {/* Exibe as informações dos membros */}
-                    <div>{membro.cargo}</div> {/* Exibe as informações dos membros */}
-                    <div className=" flex flex-col justify-end items-center gap-2 col-span-2 w-40">
-                      <button className="bg-rosa hover:scale-90  rounded-2xl shadow-md w-fit p-3" onClick={() => handleDelete(membro.id)}>
-                        <DeleteIcon/>
-                        </button> {/* Botão individual para cada membro de deletar */}
-                      <button className="bg-rosa hover:scale-90 rounded-2xl shadow-md w-fit p-3" onClick={() => handleEdit(membro.id)}>
-                        <Edit/>  
-                      </button> {/* Botão individual para cada membro de editar */}
-                    </div>
-                  </div>
-              </div>
-            )}
-          </div>
-        ))}
-        
-      </ul>
+      <div className="relative overflow-x-auto">
+  <table className="w-full">
+    <thead className="bg-amarelo text-left">
+      <tr className="py-3">
+        <th scope="col" className="w-20 p-5">#</th>
+        <th scope="col" className="w-32 p-5">nome</th>
+        <th scope="col" className="w-96 p-5">email</th>
+        <th scope="col" className="w-20 p-5">aniversário</th>
+        <th scope="col" className="w-28 p-5">cargo</th>
+        <th scope="col" className="w-40 text-center">ações</th>
+      </tr>
+    </thead>
+    <tbody className="text-left text-sm">
+      {membros.slice((paginaAtual - 1) * membrosppag, paginaAtual * membrosppag).map((membro) => (
+        <tr key={membro.id} className="bg-cinza px-8 pb-5 rounded-b-lg items-center gap-2 space-y-3">
+          <td className="w-20 p-5">{membro.id}</td>
+          <td className="w-32 p-5">{membro.name}</td>
+          <td className="w-96 p-5">{membro.email}</td>
+          <td className="w-20 p-5">{membro.aniversario}</td>
+          <td className="w-28 p-5">{membro.cargo}</td>
+          <td className="flex flex-col justify-end items-center gap-2 col-span-2 w-40">
+            <button className="bg-rosa hover:scale-90 rounded-2xl shadow-md w-fit p-3" onClick={() => handleDelete(membro.id)}>
+              <DeleteIcon/>
+            </button>
+            <button className="bg-rosa hover:scale-90 rounded-2xl shadow-md w-fit p-3" onClick={() => handleEdit(membro.id)}>
+              <Edit/>
+            </button>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
       <div className="flex justify-center pt-10">
             <button className="bg-verde hover:scale-125 disabled:scale-100 rounded-full p-1 disabled:bg-cinzaEsc disabled: verde"
             onClick={()=> setPaginaAtual((paginaAtual)=> Math.max(paginaAtual-1,1))}
