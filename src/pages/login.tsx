@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
     return (
-        <div className="py-12 px-6 md:px-32 items-center space-y-10 flex flex-col">
+        <div className="py-12 px-6 ctt:h-[72vh] md:h-[84vh] md:px-32 items-center space-y-10 flex flex-col">
             <Image src={"/Login.png"} alt={"Logo login"} width={120} height={120}/>
             <div className="bg-cinza shadow-md rounded-xl">
                 

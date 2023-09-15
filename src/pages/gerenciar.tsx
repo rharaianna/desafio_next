@@ -195,7 +195,7 @@ const handleDelete = async (memberId: number) => {
       <tr className="py-3">
         <th scope="col" className="w-20 p-5">#</th>
         <th scope="col" className="w-32 p-5">nome</th>
-        <th scope="col" className="w-96 p-5">email</th>
+        <th scope="col" className=" w-52 p-5">email</th>
         <th scope="col" className="w-20 p-5">aniversário</th>
         <th scope="col" className="w-28 p-5">cargo</th>
         <th scope="col" className="w-40 text-center">ações</th>
@@ -206,10 +206,10 @@ const handleDelete = async (memberId: number) => {
         <tr key={membro.id} className="bg-cinza px-8 pb-5 rounded-b-lg items-center gap-2 space-y-3">
           <td className="w-20 p-5">{membro.id}</td>
           <td className="w-32 p-5">{membro.name}</td>
-          <td className="w-96 p-5">{membro.email}</td>
+          <td className="w-52 p-5">{membro.email}</td>
           <td className="w-20 p-5">{membro.aniversario}</td>
           <td className="w-28 p-5">{membro.cargo}</td>
-          <td className="flex flex-col justify-end items-center gap-2 col-span-2 w-40">
+          <td className="flex justify-center items-center gap-2 w-40">
             <button className="bg-rosa hover:scale-90 rounded-2xl shadow-md w-fit p-3" onClick={() => handleDelete(membro.id)}>
               <DeleteIcon/>
             </button>

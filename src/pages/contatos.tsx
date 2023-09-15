@@ -13,7 +13,7 @@ export default function Contatos() {
         <title> Contatos | Amicrafts </title>
       </Head>
 
-      <div className='py-12 px-6 md:px-32  space-y-10 md:space-y-10'>
+      <div className='py-12 px-6 md:px-32  md:h-[84vh]  space-y-10 md:space-y-10'>
         <TitleServices title={'Entre em contato'}></TitleServices>
         <Image className='md:hidden  block m-auto' src={'/Group 20.png'} alt={''} width={150} height={100} unoptimized/>
         <div className=" flex justify-center">

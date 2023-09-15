@@ -11,9 +11,9 @@ export default function NotFound() {
             <title> 404 | AmiCrafts </title>
         </Head>
         <div>
-            <div className=" min-h-full">
-                <Image className="fixed top-12 -z-20 md:w-[25%] left-0 ctt:-left-5" src={"/Group 18.png"}  width={150} height={100}  alt={""}/>
-                <Image className="fixed top-12 -z-20 md:w-[25%] right-0 ctt:-right-5 " src={"/Group 19.png"} width={150} height={100} alt={""}/>
+            <div className="ctt:h-[67vh] md:h-[80vh]">
+                <Image className="fixed top-20 -z-20 w-[45vh] left-0 ctt:-left-5" src={"/Group 18.png"}  width={150} height={100}  alt={""}/>
+                <Image className="fixed top-20 -z-20 w-[42vh] right-0 ctt:-right-0  " src={"/Group 19.png"} width={150} height={100} alt={""}/>
                 <div className="m-10  flex flex-col md:space-y-10 space-y-2 text-center items-center justify-center">
                     <TitleServices title={"Opps..."}/>
                     <TitleServices title={"Não conseguimos encontrar esta página"}/>
